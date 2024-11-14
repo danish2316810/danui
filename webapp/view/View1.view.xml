@@ -1,0 +1,55 @@
+<mvc:View controllerName="app.project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:table="sap.ui.table"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+        <table:Table
+        id="myUITable"
+        rows="{/BusinessPartnerSet}"
+        visibleRowCount="10"
+        selectionMode="Single"
+        >
+        
+        <!-- Column Definitions -->
+        <table:columns>
+            <table:Column label="ID" width="10rem">
+                <Text text="ID" />
+                <table:template>
+                    <Text text="{BusinessPartnerID}" /> <!-- Replace with the correct property -->
+                </table:template>
+            </table:Column>
+            
+            <table:Column label="Name" width="15rem">
+                <Text text="Name" />
+                <table:template>
+                    <Text text="{CompanyName}" /> <!-- Replace with the correct property -->
+                </table:template>
+            </table:Column>
+            
+            <table:Column label="Address" width="20rem">
+                <Text text="Address" />
+                <table:template>
+                    <Text text="{WebAddress}" /> <!-- Replace with the correct property -->
+                </table:template>
+            </table:Column>
+            
+            <table:Column label="Phone" width="15rem">
+                <Text text="Phone" />
+                <table:template>
+                    <Text text="{PhoneNumber}" /> <!-- Replace with the correct property -->
+                </table:template>
+            </table:Column>
+            
+            <table:Column label="Email" width="25rem">
+                <Text text="Email" />
+                <table:template>
+                    <Text text="{CurrencyCode}" /> <!-- Replace with the correct property -->
+                </table:template>
+            </table:Column>
+        </table:columns>
+        
+    </table:Table>
+        </content>
+    </Page>
+</mvc:View>
